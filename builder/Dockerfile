@@ -19,7 +19,7 @@ ENV NODE_PATH=${NVM_DIR}/v${NODE_VERSION}/lib/node_modules \
 COPY root/ /
 
 RUN set -x; mkdir -p /go/src/ \
-    && yum install -y yum-utils centos-release-okd-4.15 \
+    && yum install -y yum-utils centos-release-okd-4.14 \
     && yum-config-manager --enable '*' \
     && yum-config-manager --save \
         --setopt=install_weak_deps=False \
